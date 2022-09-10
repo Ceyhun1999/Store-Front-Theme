@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+.container { text-align: center }
+
+/* styling elements of the header (nav, menu, etc..) HEADER */
+header {padding: 15px 10px }
+nav> * { margin-bottom: 20px }
+#logo a {
+    color: #fff;
+    font: 1.5em 'Bowlby One', cursive;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+#search {
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+}
+#search input {
+    background: #edebeb;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+}
+#search button {
+    background: #edebeb;
+    border: none;
+    padding: 0 5px;
+    border-radius: 5px 0 0 5px;
+}
+#nav-buttons { display: flex; justify-content: center; }
+#nav-buttons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background: #edebeb;
+    margin-left: 10px;
+}
+
+/* styling elements of the first-section - MAIN */
+#carouselExampleControls { width: 450px }
+#carouselExampleControls button span { background: #ada5a5; border-radius: 50% }
+
+#first-s, #second-s, #third-s { width: 450px; height: 450px }
+#first-s {background: url('../img/slider-1.png') center/cover }
+#second-s {background: url('../img/slider-2.png') center/cover }
+#third-s {background: url('../img/slider-3.png') center/cover }
+
+#first-section-products { text-align: center; }
+#earphone {
+    overflow: hidden;
+    padding: 15px 15px 15px 0;
+}
+#smartphone {
+    overflow: hidden;
+    padding: 15px 15px 0 0;
+}
+#smartphone, #earphone {
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    background: #e0dddd;
+    position: relative;
+    border-radius: 15px;
+    margin: 0 auto 20px auto;
+}
+.product-text i, .product-text span {
+    display: block;
+}
+.product-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0,-50%);
+}
+.product-text> * {
+    margin-bottom: 10px;
+    color: rgb(97, 88, 88);
+    font: 1em 'Bowlby One', cursive;
+}
+#smartphone img {
+    transition: 0.4s;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .container { max-width: 860px; margin: auto }
+
+    /* styling elements of the header (nav, menu, etc..) HEADER */
+    nav {  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #search { width: 500px }
+    #search input { width: 100% }
+
+    /* styling elements of the first-section - MAIN */
+    /* #first-section .container {
+        display: grid;
+        background: red;
+        grid-template-columns:auto auto;
+        grid-template-areas: 'carousel smartphone'
+                             'carousel earphone'
+                             'carousel clock'   
+        ;
+    }
+    #carouselExampleControls { grid-area: carousel }
+    #smartphone { grid-area: smartphone }
+    #earphone { grid-area: earphone }
+    #clock { grid-area: clock } */
+    #first-section .container { 
+        display: flex;
+        justify-content: space-between;
+    }
+    #smartphone:hover #a {
+        transform: rotate(3deg);
+        scale: 1.1;
+
+    }
+        
+    #earphone:hover #b {
+        transform: rotate(3deg);
+        scale: 1.1;
+
+    }
+    
+    
+}
